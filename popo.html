@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия по России</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7176c5d2-cc96-49f1-a017-bcc5c6426051.png') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            animation: fadeIn 3s ease-in;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        
+        /* Destinations Section */
+        .destinations {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .destinations h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .destinations h2:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .destination-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .destination-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Contact Form */
+        .contact {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            .destinations h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Hero Section -->
+    <header id="header">
+        <h1>Открой для себя Россию</h1>
+        <p>Путешествуйте по самым красивым местам нашей необъятной страны</p>
+        <a href="#destinations" class="btn">Начать путешествие</a>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Destinations Section -->
+        <section id="destinations" class="destinations container">
+            <h2>Популярные направления</h2>
+            <p>Откройте для себя самые красивые места России, которые покорят ваше сердце</p>
+            
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/23c0c38c-d858-415c-aa4d-54749e8b4733.png" alt="Золотые купола храмов и кремлевские стены в солнечный день, Москва">
+                    <div class="card-content">
+                        <h3>Москва</h3>
+                        <p>Столица России с богатой историей и культурой. Посетите Красную площадь, Кремль и множество музеев.</p>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cee1918c-a31d-407b-92f5-524b14a58ecd.png" alt="Санкт-Петербург в белые ночи с разведенными мостами и золотыми шпилями">
+                    <div class="card-content">
+                        <h3>Санкт-Петербург</h3>
+                        <p>Культурная столица с прекрасной архитектурой, музеями и белыми ночами.</p>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/29544b7e-1cc7-4a9d-b9a6-9d37991832ea.png" alt="Озеро Байкал в зимний день с прозрачным льдом и заснеженными горами на фоне">
+                    <div class="card-content">
+                        <h3>Байкал</h3>
+                        <p>Самое глубокое озеро в мире с уникальной природой и кристально чистой водой.</p>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e79a7a7-17cd-49e3-a4c6-d0ea0cd503da.png" alt="Горные вершины Кавказа с зелеными долинами и традиционными каменными домами">
+                    <div class="card-content">
+                        <h3>Кавказ</h3>
+                        <p>Живописные горы, минеральные источники и гостеприимные народы Северного Кавказа.</p>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c7424f5e-fe0a-4d3e-be18-45b357e27f23.png" alt="Золотая осень в Карелии с озерами, соснами и деревянными церквями">
+                    <div class="card-content">
+                        <h3>Карелия</h3>
+                        <p>Край озер, лесов и уникальных деревянных архитектурных памятников.</p>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/91295373-4572-4e02-bbfb-f03f9a89bd30.png" alt="Камчатские вулканы с дымящимися кратерами и дикими медведями у реки">
+                    <div class="card-content">
+                        <h3>Камчатка</h3>
+                        <p>Земля вулканов, гейзеров и нетронутой природы на самом восточном краю России.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="container">
+                <h2>Планируете путешествие?</h2>
+                <p>Оставьте свои контакты, и мы поможем организовать вашу поездку</p>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="destination">Интересующее направление</label>
+                        <input type="text" id="destination" name="destination">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Путешествия по России. Все права защищены.</p>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const destination = document.getElementById('destination').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Спасибо, ${name}! Ваш запрос о поездке в ${destination || 'Россию'} получен. Мы свяжемся с вами по email (${email}) в ближайшее время.`);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Header background animation
+        const header = document.getElementById('header');
+        const images = [
+            'https://placehold.co/1920x1080', 
+            'https://placehold.co/1920x1080', 
+            'https://placehold.co/1920x1080'
+        ];
+        let currentImage = 0;
+        
+        function changeBackground() {
+            currentImage = (currentImage + 1) % images.length;
+            header.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${images[currentImage]}')`;
+        }
+        
+        // Change background every 5 seconds
+        setInterval(changeBackground, 5000);
+    </script>
+</body>
+</html>
+
